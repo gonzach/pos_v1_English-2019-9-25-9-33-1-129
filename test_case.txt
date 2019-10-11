@@ -1,0 +1,72 @@
+CASE1 
+GIVEN: tags: [String] 
+WHEN: decodedTags
+THEN: items:[object]
+
+CASE2
+GIVEN: tags: [String]
+WHEN: decodedBarcodes
+THEN: decodedBarcodes:[0]
+
+CASE3
+GIVEN: decodedBarcodes  
+WHEN: combineItems
+THEN: items
+
+CASE4
+GIVEN: decodedBarcodes
+WHEN: loadItems
+THEN: itemsWithoutCount
+
+CASE5
+GIVEN: items
+WHEN: calculateReceipt
+THEN: receipt
+
+CASE6
+GIVEN: items
+WHEN: calculateReceiptItem 
+THEN: receiptItems
+
+CASE7
+GIVEN: 
+WHEN: calculateReceiptItems 
+THEN: promotion
+
+CASE8
+GIVEN: items
+WHEN: calculateReceiptTotal 
+THEN: receiptItems
+
+CASE9
+GIVEN: items, promotions
+WHEN: calculateReceiptItems 
+THEN: receiptItems
+
+CASE10
+GIVEN: items
+WHEN: calculateReceiptSavings
+THEN: savings
+
+CASE11
+GIVEN: receipt
+WHEN: renderReceipt 
+THEN: formattedReceipt
+
+
+
+
+
+
+
+
+
+CASE1 
+GIVEN: decodedBarcodes
+WHEN: LoadItem based on decodedBarcodes
+THEN: get itemsWithoutCount 
+
+CASE2
+GIVEN: 
+WHEN: LoadItem based on decodedBarcodes
+THEN: get itemsWithoutCount 
