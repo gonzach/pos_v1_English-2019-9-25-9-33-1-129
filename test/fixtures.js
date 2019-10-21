@@ -1,6 +1,6 @@
 'use strict';
 
-function loadAllItems() {
+function loadAllItems(barcode) {
   return [
     {
       barcode: 'ITEM000000',
@@ -53,3 +53,7 @@ function loadPromotions() {
     }
   ];
 }
+
+module.exports = {
+  loadAllItems : loadAllItems
+};
